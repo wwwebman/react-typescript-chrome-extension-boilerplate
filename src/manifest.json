@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "React Typescript Chrome Extension Boilerplate",
+  "version": "0.0.1",
+  "description": "Working React TypeScript boilerplate for a Chrome extension using Create React App.",
+  "background": { "service_worker": "background.bundle.js" },
+  "action": {
+    "default_popup": "./index.html",
+    "default_icon": "logo-34.png"
+  },
+  "icons": {
+    "128": "logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8000/*"],
+      "js": ["content.bundle.js"]
+    }
+  ],
+  "devtools_page": "devtools.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["logo-128.png", "logo-34.png"],
+      "matches": []
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "permissions": ["storage", "contextMenus", "scripting", "tabs"],
+  "host_permissions": ["http://localhost:3000/"]
+}
