@@ -28,5 +28,5 @@
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "permissions": ["storage", "contextMenus", "scripting", "tabs"],
-  "host_permissions": ["http://localhost:3000/"]
+  "host_permissions": ["http://localhost:8000/"]
 }
